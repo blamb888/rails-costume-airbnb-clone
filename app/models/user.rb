@@ -6,10 +6,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  validates :first_name, presence: true
-  validates :last_name, presence: true
-  validates :address, presence: true
-  validates :phone_number, presence: true
+  # validates :first_name, presence: true
+  # validates :last_name, presence: true
+  # validates :address, presence: true
+  # validates :phone_number, presence: true
 
   #   def configure_permitted_parameters
   #   # For additional fields in app/views/devise/registrations/new.html.erb
