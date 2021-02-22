@@ -1,2 +1,71 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.costumeland.com.au/wp-content/uploads/2017/03/HALLOWEEN-banner.jpg);">
+  <div class="container-landing">
+    <h1>What costume <strong>matches</strong> your <strong>personality</strong>?</h1>
+    <p>Clothes make a statement, <strong class="text-danger">Costumes tell a story</strong>.</p>
+    
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="Looking for something in particular?" aria-label="Search" aria-describedby="button-addon2">
+      <div class="input-group-append">
+        <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="d-flex">
+<h1 class="alert-danger text-center mx-5 mt-5 mb-3 p-1" role="alert"><strong>Categories</strong></h1>
+</div>
+
+<div class="cards-landing mx-5 mt-3 mb-5">
+  
+  <div>
+  <%= link_to costumes_path(@costumes) do %>
+    <div class="card-landing" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(https://c4.wallpaperflare.com/wallpaper/423/310/368/women-model-long-hair-cosplay-wallpaper-preview.jpg)">
+      Heroes
+    </div>
+    <% end %>
+  </div>
+
+  <div>
+  <%= link_to costumes_path(@costumes) do %>
+    <div class="card-landing" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(https://previews.123rf.com/images/jqnoc/jqnoc1710/jqnoc171000249/87503499-people-disguised-in-star-wars-costumes-for-the-iii-imperial-stormtroopers-parade-2017-in-the-old-cit.jpg)">
+      Movies
+    </div>
+    <% end %>
+  </div>
+
+  <div>
+  <%= link_to costumes_path(@costumes) do %>
+    <div class="card-landing" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(https://www.gannett-cdn.com/-mm-/c03bfeca7fc182ff3c06a2364c8ea09652dbccba/c=0-198-3963-2437/local/-/media/2015/10/16/Louisville/Louisville/635805905136741193-HalloweenMakeup-2.jpg?width=660&height=372&fit=crop&format=pjpg&auto=webp)">
+      Horror
+    </div>
+    <% end %>
+  </div>
+
+  <div>
+  <%= link_to costumes_path(@costumes) do %>
+    <div class="card-landing" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(https://m.media-amazon.com/images/S/aplus-seller-content-images-us-east-1/A13V1IB3VIYZZH/A2OA7G0W7AULYV/B06WCZFBM6/yTQb6kvXRaSL._UX960_TTW__.jpg)">
+      Animals
+    </div>
+    <% end %>
+  </div>
+
+  <div>
+  <%= link_to costumes_path(@costumes) do %>
+    <div class="card-landing" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(https://www.myanimeshoponline.com/wp-content/uploads/2018/10/young-3161821_1920-1.jpg)">
+      Anime
+    </div>
+    <% end %>
+  </div>
+
+  <div>
+  <%= link_to costumes_path(@costumes) do %>
+    <div class="card-landing" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(https://previews.123rf.com/images/neydt/neydt1808/neydt180800176/111725650-mulhouse-france-august-17-2018-group-of-fans-of-the-serie-tv-la-casa-de-papel-paper-house-on-netflix.jpg)">
+      TV Show
+    </div>
+    <% end %>
+  </div>
+
+</div>
+
+
