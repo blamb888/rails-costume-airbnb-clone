@@ -5,6 +5,7 @@
   <div class="cards-index">
     <% @costumes.each do |costume| %>
       <div class="card-index">
+      <%= cl_image_tag costume.photo.key, height: 50, width: 50, crop: :fill  %>
         <div class="row">
           <div class="col-12">
             <%= link_to costume_path(costume) do %>
