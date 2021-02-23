@@ -4,4 +4,17 @@ class BookingPolicy < ApplicationPolicy
       scope.all
     end
   end
+
+  def new?
+    #have to be logged in
+  end
+
+  def create?
+    #have to be logged in
+    false
+  end
+
+  def update?
+    false
+  end
 end
