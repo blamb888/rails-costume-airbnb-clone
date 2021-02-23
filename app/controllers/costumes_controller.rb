@@ -38,6 +38,6 @@ private
   end
 
   def costume_params
-    params.require(:costume).permit(:name, :user, :category, :description, :price)
+    params.require(:costume).permit(:name, :user, :category, :description, :price, :photo)
   end
 end
