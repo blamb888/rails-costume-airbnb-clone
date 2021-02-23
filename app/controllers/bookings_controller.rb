@@ -21,11 +21,14 @@ class BookingsController < ApplicationController
   end
 
   def create
+    @costume = Costume.find(params[:costume_id])
     @booking = Booking.new(booking_params)
+    @booking.costume = @costume
+    @booking.user = current_user
     if @booking.save
-      redirect_to costume_bookings_path
+      redirect_to bookings_path
     else
-      render :new
+      render "costumes/show"
     end
   end
 
@@ -40,6 +43,6 @@ private
   end
 
   def booking_params
-    params.require(:booking).permit(:name, :user, :category, :description, :price)
+    params.require(:booking).permit(:checkout_date, :return_date)
   end
 end
