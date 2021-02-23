@@ -7,6 +7,7 @@ class CostumePolicy < ApplicationPolicy
 
   def new?
     #have to be logged in
+    true
   end
 
   def create?
