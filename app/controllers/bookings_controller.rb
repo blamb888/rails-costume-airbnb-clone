@@ -37,7 +37,7 @@ private
 
   def set_booking
    @booking = Booking.find(params[:id])
-   # authorize @booking
+   authorize @booking
   end
 
   def booking_params

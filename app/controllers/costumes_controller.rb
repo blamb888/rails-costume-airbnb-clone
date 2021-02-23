@@ -29,8 +29,7 @@ private
 
   def set_costume
     @costume = Costume.find(params[:id])
-    # 
-    # authorize @costume
+    authorize @costume
   end
 
   def costume_params

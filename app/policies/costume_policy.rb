@@ -11,10 +11,10 @@ class CostumePolicy < ApplicationPolicy
 
   def create?
     #have to be logged in
-    false
+    true
   end
 
   def update?
-    false
+    true
   end
 end
