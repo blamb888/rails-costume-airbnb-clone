@@ -3,9 +3,11 @@ class BookingsController < ApplicationController
 
   def index
     @bookings = Booking.all
+    @bookings = policy_scope(Booking)
   end
 
   def edit
+    
   end
 
   def update
@@ -18,6 +20,7 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
+    authorize @booking
   end
 
   def create
@@ -25,6 +28,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.costume = @costume
     @booking.user = current_user
+    authorize @booking
     if @booking.save
       redirect_to bookings_path
     else

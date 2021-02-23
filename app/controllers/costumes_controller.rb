@@ -2,7 +2,7 @@ class CostumesController < ApplicationController
   before_action :set_costume, only: [:show, :update, :destroy]
 
   def index
-    @costumes = Costume.all
+    @costumes = policy_scope(Costume)
   end
 
   def show
@@ -11,10 +11,12 @@ class CostumesController < ApplicationController
 
   def new
     @costume = Costume.new
+    authorize @costume
   end
 
   def create
     @costume = Costume.new(costume_params)
+    authorize @costume
     if @costume.save
       redirect_to @costume
     else
@@ -24,6 +26,7 @@ class CostumesController < ApplicationController
 
   def destroy
     @costume.destroy
+    authorize @costume
     redirect_to costumes_path
   end
 private
