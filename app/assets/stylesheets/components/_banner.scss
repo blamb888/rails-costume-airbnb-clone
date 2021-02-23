@@ -1,0 +1,33 @@
+.banner {
+    background-size: cover;
+    padding-top: 330px;
+    padding-bottom: 200px;
+  }
+  
+  .banner h1 {
+    margin: 0;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+    font-size: 32px;
+    font-weight: bold;
+  }
+  
+  .banner p {
+    font-size: 20px;
+    color: white;
+    opacity: .7;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+  }
+
+  .container-landing {
+      position: absolute;
+      left: 50px;
+      bottom: 0px;
+      top: 420px;
+      height: 140px;
+  }
+
+  h1 {
+    font-family: "Roboto Condensed";
+    font-size: 32px;
+  }
