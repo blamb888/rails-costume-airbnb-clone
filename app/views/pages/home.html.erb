@@ -2,9 +2,9 @@
   <div class="container-landing">
     <h1>What costume <strong>matches</strong> your <strong>personality</strong>?</h1>
     <p>Clothes make a statement, <strong class="text-danger">Costumes tell a story</strong>.</p>
-    
+
     <div class="input-group mb-3">
-      <input type="text" class="form-control" placeholder="Looking for something in particular?" aria-label="Search" aria-describedby="button-addon2">
+      <input id="banner-typed-text" type="text" class="form-control" placeholder="" aria-label="Search" aria-describedby="button-addon2">
       <div class="input-group-append">
         <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
       </div>
@@ -17,7 +17,7 @@
 </div>
 
 <div class="cards-landing mx-5 mt-3 mb-5">
-  
+
   <div>
   <%= link_to costumes_path(@costumes) do %>
     <div class="card-landing" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(https://c4.wallpaperflare.com/wallpaper/423/310/368/women-model-long-hair-cosplay-wallpaper-preview.jpg)">
