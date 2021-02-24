@@ -1,7 +1,7 @@
 <% @bookings.sort_by(&:total_price).reverse.each do |booking| %>
 <!--<#% @bookings.each do |booking| %>-->
   <div class="card-trip mb-3">
-  <%= cl_image_tag booking.costume.photo.key, crop: :fill  %>
+  <%= cl_image_tag booking.costume.photo.key, width: 350, height: 200, gravity: :face, crop: :fill  %>
     <div class="card-trip-infos">
       <div>
         <h2><%= "Owner@me.com"%></h2>
