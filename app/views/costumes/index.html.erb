@@ -4,7 +4,7 @@
 <div class="cards-index mx-5 mt-3">
  <% @costumes.each do |costume| %>
   <div class="card-product" style="width: 800px;">
-    <img src="https://i.etsystatic.com/12047134/r/il/3279fc/1964607794/il_794xN.1964607794_c4i2.jpg" />
+    <%= cl_image_tag costume.photo.key, width: 350, height: 200, gravity: :face, crop: :fill %>
     <div class="card-product-infos">
         <ul class="list-inline d-flex">
           <li><i class="fas fa-star"></i></li>

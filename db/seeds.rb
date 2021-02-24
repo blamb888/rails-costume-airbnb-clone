@@ -15,8 +15,13 @@ User.destroy_all
 puts "Db is clean"
 
 
-user = User.create!(
-  email: 'fakeuser@me.com',
+renter = User.create!(
+  email: 'renter@me.com',
+  password: 'secret'
+  )
+
+owner = User.create!(
+  email: 'owner@me.com',
   password: 'secret'
   )
 

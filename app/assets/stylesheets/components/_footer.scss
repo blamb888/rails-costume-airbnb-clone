@@ -15,7 +15,11 @@
 }
 
 .footer a {
-    color: rgb(11,247,237);
+    color: white;
     text-align: center;
     font-size: 26px;
+}
+
+.footer a:hover {
+  color: #FF385C
 }
