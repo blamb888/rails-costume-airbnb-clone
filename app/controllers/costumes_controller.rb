@@ -8,7 +8,7 @@ class CostumesController < ApplicationController
         lat: user.latitude,
         lng: user.longitude,
         infoWindow: render_to_string(partial: "info_window", locals: { user: user }),
-        image_url: helpers.asset_url('doge_png.png')
+        image_url: helpers.asset_url('icon-png.png')
       }
     end
   end
@@ -27,7 +27,7 @@ class CostumesController < ApplicationController
     @costume.user = current_user
     authorize @costume
     if @costume.save
-      redirect_to @costume
+      redirect_to costumes_path
     else
       render :new
     end

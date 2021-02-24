@@ -5,4 +5,11 @@
 .mapboxgl-popup-content {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
+  border-color: 1px solid rgba(40, 40, 40, .5);
+}
+
+.mapboxgl-canvas {
+  position: sticky;
+  top: 0;
+  height: 100vh;
 }
