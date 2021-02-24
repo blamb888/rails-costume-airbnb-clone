@@ -1,8 +1,5 @@
-<div class="d-flex">
-<h1 class="alert-danger text-center mx-5 mt-5 mb-3 p-1" role="alert"><strong>Costume</strong></h1>
-</div>
 <div class="container-box d-flex">
-  <div class="cards-index mx-5 mt-3">
+  <div class="cards-index ml-5 mr-1 my-3">
   <% @costumes.each do |costume| %>
     <div class="card-product" style="width: 800px;">
       <%= cl_image_tag costume.photo.key, width: 350, height: 200, gravity: :face, crop: :fill %>
