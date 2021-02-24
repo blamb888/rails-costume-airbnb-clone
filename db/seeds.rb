@@ -29,7 +29,7 @@ owner = User.create!(
     file = URI.open('https://www.reviewjournal.com/wp-content/uploads/2020/10/14359546_web1_halloween.costume-3.jpg?crop=1')
   costume = Costume.create!(
     name: Faker::Superhero.name,
-    user: user,
+    user: owner,
     category: Faker::Superhero.suffix,
     description: Faker::Superhero.descriptor,
     price: rand(20..99)

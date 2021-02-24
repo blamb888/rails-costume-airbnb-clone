@@ -5,5 +5,10 @@ Rails.application.routes.draw do
   resources :costumes do
     resources :bookings, only: [:create]
   end
-    resources :bookings, only: [:index, :edit, :update]
+    resources :bookings, only: [:index, :edit, :update] do
+      member do
+        get :confirm
+      end
+    end
+
 end

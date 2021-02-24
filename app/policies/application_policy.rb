@@ -18,6 +18,10 @@ class ApplicationPolicy
     true
   end
 
+  def confirm?
+    true
+  end
+  
   def new?
     create?
   end
