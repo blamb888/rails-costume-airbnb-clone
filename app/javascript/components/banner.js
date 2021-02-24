@@ -6,7 +6,7 @@ const loadDynamicBannerText = () => {
   if (input) {
     console.log("hello there, aren't you sneaky?");
     new Typed(input, {
-      strings: ["Looking for something in particular ?", "Looking for Godzilla?", "Looking for a sexy witch?", "Looking for Pikachu?", "Looking for Goku?", "Looking for Abraham Lincoln?", "Looking for Naruto?"],
+      strings: ["Looking for something in particular?", "Looking for Godzilla?", "Looking for a sexy witch?", "Looking for Pikachu?", "Looking for Goku?", "Looking for Abraham Lincoln?", "Looking for Naruto?"],
       typeSpeed: 40,
       loop: true,
       startDelay: 30,

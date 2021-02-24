@@ -33,5 +33,4 @@ document.addEventListener('turbolinks:load', () => {
   loadDynamicBannerText();
   initMapbox();
   initAutocomplete();
-
 });
