@@ -3,6 +3,14 @@ class CostumesController < ApplicationController
 
   def index
     @costumes = policy_scope(Costume)
+    @markers = User.all.geocoded.map do |user|
+      {
+        lat: user.latitude,
+        lng: user.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { user: user }),
+        image_url: helpers.asset_url('doge_png.png')
+      }
+    end
   end
 
   def show
