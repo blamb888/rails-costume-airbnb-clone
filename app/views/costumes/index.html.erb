@@ -1,36 +1,37 @@
-<div class="container">
-  <div class="text-center">
-    <h1>Costumes For You</h1>
-    <br>
-    <br>
-  </div>
-  <div class="cards-index">
-    <% @costumes.each do |costume| %>
-      <div class="card-index">
-      <%= cl_image_tag costume.photo.key, height: 50, width: 50, crop: :fill  %>
-        <div class="row">
-          <div class="col-12">
-            <%= link_to costume_path(costume) do %>
-              <ul>
-                NAME
-                <li> <%= costume.name %> </li>
-                CATEGORY
-                <li> <%= costume.category %> </li>
-                DESCRIPTION
-                <li> <%= costume.description %> </li>
-                <li> PRICE $<%= costume.price %> </li>
-              </ul>
-            </div>
-          <% end %>
-        </div>
+<div class="d-flex">
+<h1 class="alert-danger text-center mx-5 mt-5 mb-3 p-1" role="alert"><strong>Costume</strong></h1>
+</div>
+
+<div class="cards-index mx-5 mt-3">
+ <% @costumes.each do |costume| %>
+  <div class="card-product" style="width: 800px;">
+    <%= cl_image_tag costume.photo.key, width: 350, height: 200, gravity: :face, crop: :fill %>
+    <div class="card-product-infos">
+        <ul class="list-inline d-flex">
+          <li><i class="fas fa-star"></i></li>
+          <li><i class="fas fa-star"></i></li>
+          <li><i class="fas fa-star"></i></li>
+          <li><i class="fas fa-star"></i></li>
+          <li><i class="fas fa-star"></i></li>
+        </ul>
+      <div class="heart"><i class="fas fa-heart"></i> </div>
+      <h2 class="pt-1"><strong><%= costume.name %></strong></h2>
+      <p> <strong><%= costume.category %></strong></p>
+      <p><%= costume.description %></p>
+      <%= link_to costume_path(costume) do %>
+      <div class="boton">
+        <button type="button" class="btn btn-outline-danger btn-block m-1 ">Rent me!</button>
       </div>
+      <div class="price">
+        <p><strong>$<%= costume.price %>/ day</p></strong>
+
+      </div>
+    </div>
     <% end %>
   </div>
-  <div>
-    <br>
-    <br>
-    <div class="text-center">
-      <%= link_to "Back to homepage", root_path %>
-    </div>
-  </div>
+<% end %> 
+</div>
+
+<div class="alert alert-danger" role="alert">
+  <a href="/" class="alert-link btn-lg"><i class="fas fa-home"></i></a>
 </div>
