@@ -4,7 +4,7 @@
   <%= cl_image_tag booking.costume.photo.key, crop: :fill  %>
     <div class="card-trip-infos">
       <div>
-        <h2><%=current_user.email%></h2>
+        <h2><%= "Owner@me.com"%></h2>
         <p><%= booking.costume.name%></p>
         <p><%= booking.checkout_date%></p>
         <p><%= booking.return_date%></p>
@@ -14,6 +14,11 @@
       </div>
       <h2 class="card-trip-pricing"><%= "$#{booking.total_price}/total"%></h2>
       <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+      <% if current_user.email == "owner@me.com"  && booking.pending?%>
+      <%= link_to "Confirm Booking", confirm_booking_path(booking), class: "nav-link" %>
+      <% else %>
+      <h2><%= booking.status %></h2>
+      <% end %>
     </div>
   </div>
 <% end %>
