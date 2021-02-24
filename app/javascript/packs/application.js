@@ -23,9 +23,19 @@ import "bootstrap";
 import { loadDynamicBannerText } from '../components/banner';
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
+import { initMapbox } from '../components/init_mapbox';
+import { initAutocomplete } from '../components/init_autocomplete';
+
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+<<<<<<< HEAD
   //loadDynamicBannerText();
+=======
+  loadDynamicBannerText();
+  initMapbox();
+  initAutocomplete();
+
+>>>>>>> 7b4ef54d0c053b437d72942fd6c9c895ee948d6f
 });

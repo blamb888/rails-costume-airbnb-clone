@@ -1,36 +1,41 @@
 <div class="d-flex">
 <h1 class="alert-danger text-center mx-5 mt-5 mb-3 p-1" role="alert"><strong>Costume</strong></h1>
 </div>
+<div class="container-box d-flex">
+  <div class="cards-index mx-5 mt-3">
+  <% @costumes.each do |costume| %>
+    <div class="card-product" style="width: 800px;">
+      <%= cl_image_tag costume.photo.key, width: 350, height: 200, gravity: :face, crop: :fill %>
+      <div class="card-product-infos">
+          <ul class="list-inline d-flex">
+            <li><i class="fas fa-star"></i></li>
+            <li><i class="fas fa-star"></i></li>
+            <li><i class="fas fa-star"></i></li>
+            <li><i class="fas fa-star"></i></li>
+            <li><i class="fas fa-star"></i></li>
+          </ul>
+        <div class="heart"><i class="fas fa-heart"></i> </div>
+        <h2 class="pt-1"><strong><%= costume.name %></strong></h2>
+        <p> <strong><%= costume.category %></strong></p>
+        <p><%= costume.description %></p>
+        <%= link_to costume_path(costume) do %>
+        <div class="boton">
+          <button type="button" class="btn btn-outline-danger btn-block m-1 ">Rent me!</button>
+        </div>
+        <div class="price">
+          <p><strong>$<%= costume.price %>/ day</p></strong>
 
-<div class="cards-index mx-5 mt-3">
- <% @costumes.each do |costume| %>
-  <div class="card-product" style="width: 800px;">
-    <%= cl_image_tag costume.photo.key, width: 350, height: 200, gravity: :face, crop: :fill %>
-    <div class="card-product-infos">
-        <ul class="list-inline d-flex">
-          <li><i class="fas fa-star"></i></li>
-          <li><i class="fas fa-star"></i></li>
-          <li><i class="fas fa-star"></i></li>
-          <li><i class="fas fa-star"></i></li>
-          <li><i class="fas fa-star"></i></li>
-        </ul>
-      <div class="heart"><i class="fas fa-heart"></i> </div>
-      <h2 class="pt-1"><strong><%= costume.name %></strong></h2>
-      <p> <strong><%= costume.category %></strong></p>
-      <p><%= costume.description %></p>
-      <%= link_to costume_path(costume) do %>
-      <div class="boton">
-        <button type="button" class="btn btn-outline-danger btn-block m-1 ">Rent me!</button>
+        </div>
       </div>
-      <div class="price">
-        <p><strong>$<%= costume.price %>/ day</p></strong>
-
-      </div>
+      <% end %>
     </div>
-    <% end %>
-  </div>
-<% end %> 
+  <% end %>
 </div>
+    <div id="map"
+        style="width: 100%; height: 100vh; overflow: hidden;"
+        data-markers="<%= @markers.to_json %>"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+  </div>
 
 <div class="alert alert-danger" role="alert">
   <a href="/" class="alert-link btn-lg"><i class="fas fa-home"></i></a>
