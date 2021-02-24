@@ -17,19 +17,35 @@ puts "Db is clean"
 
 renter = User.create!(
   email: 'renter@me.com',
-  password: 'secret'
+  password: 'secret',
+  address: 'Tokyo Tower'
   )
 
 owner = User.create!(
   email: 'owner@me.com',
-  password: 'secret'
+  password: 'secret',
+  address: 'Tokyo Skytree'
   )
 
-  20.times do
+randomGuy = User.create!(
+  email: 'randomguy@me.com',
+  password: 'secret',
+  address: 'Yoyogi Park'
+  )
+
+randomGuy2 = User.create!(
+  email: 'randomguy2@me.com',
+  password: 'secret',
+  address: 'Roppongi Hills'
+  )
+
+array = [renter, owner, randomGuy, randomGuy2]
+
+  5.times do
     file = URI.open('https://www.reviewjournal.com/wp-content/uploads/2020/10/14359546_web1_halloween.costume-3.jpg?crop=1')
   costume = Costume.create!(
     name: Faker::Superhero.name,
-    user: user,
+    user: array.sample,
     category: Faker::Superhero.suffix,
     description: Faker::Superhero.descriptor,
     price: rand(20..99)
