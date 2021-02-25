@@ -36,7 +36,7 @@ class CostumesController < ApplicationController
     @costume.user = current_user
     authorize @costume
     if @costume.save
-      redirect_to costumes_path
+      redirect_to costume_path(@costume)
     else
       render :new
     end
