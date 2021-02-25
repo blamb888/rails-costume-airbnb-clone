@@ -18,10 +18,9 @@
                             required: true,
                             input_html: { autocomplete: "new-password" } %>-->
           </div>
-          <div class="btn btn-outline-secondary bt-sm">
-            <%= f.button :submit, "Sign up" %>
+          <div class="">
+            <%= f.button :submit, "Sign up", class: "btn btn-outline-danger" %>
           </div>
-          <br>
           <br>
         <% end %>
         <%= render "devise/shared/links" %>
