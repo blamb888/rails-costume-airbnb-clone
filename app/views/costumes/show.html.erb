@@ -4,5 +4,7 @@
       <%= render "costumes/costume_show_card", :costume => @costume%>
     </div>
       <%= render "bookings/form" %>
+      <%= render "reviews/review_form", :costume => @costume, :review => @review%>
+      <%= render "reviews/reviews_container", :costume => @costume %>
   </div>
 </div>
