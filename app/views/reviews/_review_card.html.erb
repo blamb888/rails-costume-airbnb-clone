@@ -1,0 +1,15 @@
+<div class="notification">
+  <img src='https://kitt.lewagon.com/placeholder/users/arthur-littm' class="avatar-large" />
+  <div class="notification-content">
+    <p><small><%= review.created_at.strftime("%Y-%m-%d") %></small></p>
+    <p><%= review.content %></p>
+  </div>
+
+  <div class="">
+    <p>
+      <% review.rating.times do %>
+        <i class="fas fa-star"></i>
+      <% end %>
+    </p>
+  </div>
+</div>
