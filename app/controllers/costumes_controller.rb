@@ -1,5 +1,7 @@
 class CostumesController < ApplicationController
   before_action :set_costume, only: [:show, :update, :destroy]
+  # visitors can see index page, otherwise will ask for login
+  skip_before_action :authenticate_user!, only: [ :index ]
 
   def index
     @costumes = policy_scope(Costume)
@@ -15,6 +17,7 @@ class CostumesController < ApplicationController
 
   def show
     @booking = Booking.new
+    @review = Review.new
   end
 
   def new
