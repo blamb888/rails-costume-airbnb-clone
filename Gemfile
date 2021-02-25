@@ -71,3 +71,4 @@ gem 'faker'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary', '~> 1.16.0'
 gem 'geocoder'
+gem 'pg_search'

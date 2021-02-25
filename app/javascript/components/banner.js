@@ -1,7 +1,7 @@
 import Typed from 'typed.js';
 
 // const input = document.querySelector("#banner-typed-text");
-const input = document.querySelector('input[type=text]')
+const input = document.getElementById('banner-typed-text')
 const loadDynamicBannerText = () => {
   if (input) {
     console.log("hello there, aren't you sneaky?");

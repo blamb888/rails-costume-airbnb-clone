@@ -2,13 +2,19 @@ class CostumesController < ApplicationController
   before_action :set_costume, only: [:show, :update, :destroy]
 
   def index
-    @costumes = policy_scope(Costume)
+    
+    if params[:query].blank?
+      @costumes = policy_scope(Costume).where(category: params[:category])
+    else
+      @costumes = policy_scope(Costume).search_by_name_and_category(params[:query])
+    end
+      
     @markers = User.all.geocoded.map do |user|
       {
         lat: user.latitude,
         lng: user.longitude,
         infoWindow: render_to_string(partial: "info_window", locals: { user: user }),
-        image_url: helpers.asset_url('icon-png.png')
+        image_url: helpers.asset_url('ghost.png')
       }
     end
   end
