@@ -3,6 +3,7 @@ class CostumesController < ApplicationController
   # visitors can see index page, otherwise will ask for login
   skip_before_action :authenticate_user!, only: [ :index ]
 
+
   def index
     @costumes = policy_scope(Costume)
     @markers = User.all.geocoded.map do |user|
@@ -22,6 +23,8 @@ class CostumesController < ApplicationController
 
   def new
     @costume = Costume.new
+    @categories = ["heroes", "movies", "horror", "animals", "anime", "TV show"]
+
     authorize @costume
   end
 
