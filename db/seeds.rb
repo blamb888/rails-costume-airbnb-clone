@@ -41,13 +41,13 @@ randomGuy2 = User.create!(
 
 array = [renter, owner, randomGuy, randomGuy2]
 
-  5.times do
+  20.times do
     file = URI.open('https://www.reviewjournal.com/wp-content/uploads/2020/10/14359546_web1_halloween.costume-3.jpg?crop=1')
-  costume = Costume.create!(
+    costume = Costume.create!(
     name: Faker::Superhero.name,
     user: array.sample,
-    category: Faker::Superhero.suffix,
-    description: Faker::Superhero.descriptor,
+    category: Costume::CATEGORIES.sample,
+    description: Faker::Commerce.product_name,
     price: rand(20..99)
     )
     costume.photo.attach(io: file, filename: 'diaDeLosMuertos.png', content_type: 'image/png')
