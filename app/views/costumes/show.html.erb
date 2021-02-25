@@ -3,6 +3,8 @@
     <div class="col-6">
       <%= render "costumes/costume_show_card", :costume => @costume%>
     </div>
+    <% if(@costume.user != current_user) %>
       <%= render "bookings/form" %>
+    <% end%>
   </div>
 </div>
