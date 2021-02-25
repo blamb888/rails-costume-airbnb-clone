@@ -3,6 +3,7 @@ class CostumesController < ApplicationController
   # visitors can see index page, otherwise will ask for login
   skip_before_action :authenticate_user!, only: [ :index ]
 
+
   def index
     
     if params[:query].blank?
@@ -28,6 +29,8 @@ class CostumesController < ApplicationController
 
   def new
     @costume = Costume.new
+    @categories = ["heroes", "movies", "horror", "animals", "anime", "TV show", "cartoon", "princess", "historical figure"]
+
     authorize @costume
   end
 
