@@ -6,6 +6,10 @@
         <p><%= costume.description%></p>
       </div>
       <h2 class="card-trip-pricing"><%= "$#{costume.price}/day"%></h2>
-      <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+      <% if user.photo.exist? %>
+        <%= cl_image_tag user.photo.key, gravity: :face, crop: :fill %>
+      <% else %>
+        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+      <% end %>
     </div>
   </div>
