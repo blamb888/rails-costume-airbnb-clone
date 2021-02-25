@@ -3,6 +3,7 @@
   align-items: center;
 }
 .tabs-underlined {
+  flex-direction: column;
   .tab-underlined {
     color: black;
     padding: 8px;
