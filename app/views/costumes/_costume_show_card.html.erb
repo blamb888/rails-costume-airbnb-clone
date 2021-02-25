@@ -1,11 +1,11 @@
-<div class="card-trip">
-  <%= cl_image_tag costume.photo.key, width: 350, height: 200, gravity: :face, crop: :fill %>
-  <div class="card-trip-infos">
-    <div>
-      <h2><%=costume.name%></h2>
-      <p><%= costume.description%></p>
+  <div class="card-trip m-2">
+    <%= cl_image_tag costume.photo.key, width: 350, height: 200, gravity: :face, crop: :fill %>
+    <div class="card-trip-infos">
+      <div>
+        <h2><%=costume.name%></h2>
+        <p><%= costume.description%></p>
+      </div>
+      <h2 class="card-trip-pricing"><%= "$#{costume.price}/day"%></h2>
+      <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
     </div>
-    <h2 class="card-trip-pricing"><%= "$#{costume.price}/day"%></h2>
-    <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
   </div>
-</div>

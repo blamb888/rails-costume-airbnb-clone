@@ -1,11 +1,11 @@
-<div class="container my-0 flex-grow-1 align-content-center">
+<div class="container-fluid my-0 flex-grow-1 align-content-center">
 
   <ul class="nav tabs-underlined" id="myTab" role="tablist">
     <li class="nav-item" role="presentation">
-      <a class="active tab-underlined" id="my-costumes-tab" data-toggle="tab" href="#bookings" role="tab" aria-controls="home" aria-selected="true">My Costumes</a>
+      <a class="active tab-underlined" id="my-costumes-tab" data-toggle="tab" href="#bookings" role="tab" aria-controls="home" aria-selected="true">Lending</a>
     </li>
     <li class="nav-item" role="presentation">
-      <a class="tab-underlined" id="my-bookings-tab" data-toggle="tab" href="#requests" role="tab" aria-controls="profile" aria-selected="false">My Bookings</a>
+      <a class="tab-underlined" id="my-bookings-tab" data-toggle="tab" href="#requests" role="tab" aria-controls="profile" aria-selected="false">Renting</a>
     </li>
     <li class="nav-item" role="presentation">
       <a class="tab-underlined" id="profile-tab" data-toggle="tab" href="#converstions" role="tab" aria-controls="converstion" aria-selected="false">Profile</a>
@@ -15,15 +15,18 @@
 
   <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade py-3 show active" id="bookings" role="tabpanel" aria-labelledby="my-costumes-tab">
-      <% current_user.costumes.each do |costume| %>
-        <%= render "costumes/costume_show_card", costume: costume %>
-      <% end %>
+      <div class="container d-flex flex-wrap">
+        <% current_user.costumes.each do |costume| %>
+          <%= render "costumes/costume_show_card", costume: costume %>
+        <% end %>
+      </div>
     </div>
     <div class="tab-pane fade py-3" id="requests" role="tabpanel" aria-labelledby="my-bookings-tab">
       <%= render "bookings/booking_show_card" %>
     </div>
     <div class="tab-pane fade py-3" id="converstions" role="tabpanel" aria-labelledby="profile-tab">
-      User Profile goes here~
+      <%= render "user_profile" %>
+
     </div>
   </div>
 
@@ -31,4 +34,4 @@
 
 
 
-    </div>
+</div>
