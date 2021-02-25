@@ -23,7 +23,7 @@ class CostumesController < ApplicationController
 
   def new
     @costume = Costume.new
-    @categories = ["heroes", "movies", "horror", "animals", "anime", "TV show"]
+    @categories = ["heroes", "movies", "horror", "animals", "anime", "TV show", "cartoon", "princess", "historical figure"]
 
     authorize @costume
   end
