@@ -5,6 +5,14 @@ class CostumePolicy < ApplicationPolicy
     end
   end
 
+  def index
+    #everyone can see without logging in
+    true
+  end
+
+  def show
+    #everyone can see without logging in
+  end
   def new?
     #have to be logged in
     true
