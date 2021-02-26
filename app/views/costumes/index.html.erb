@@ -1,31 +1,26 @@
 <div class="container-box d-flex">
   <div class="cards-index ml-5 mr-1 my-3">
   <% @costumes.each do |costume| %>
+    <%= link_to costume_path(costume) do %>
     <div class="card-product" style="width: 800px;">
       <%= cl_image_tag costume.photo.key, width: 350, height: 200, gravity: :face, crop: :fill %>
       <div class="card-product-infos">
-          <ul class="list-inline d-flex">
-            <li><i class="fas fa-star"></i></li>
-            <li><i class="fas fa-star"></i></li>
-            <li><i class="fas fa-star"></i></li>
-            <li><i class="fas fa-star"></i></li>
-            <li><i class="fas fa-star"></i></li>
-          </ul>
-        <div class="heart"><i class="fas fa-heart"></i> </div>
         <h2 class="pt-1"><strong><%= costume.name %></strong></h2>
+        <strong><small><em><%= costume.user.address %></em></small></strong>
         <p> <strong><%= costume.category %></strong></p>
         <p><%= costume.description %></p>
         <%= link_to costume_path(costume) do %>
-        <div class="boton">
-          <button type="button" class="btn btn-outline-danger btn-block m-1 ">Rent me!</button>
-        </div>
         <div class="price">
+          <h6 class="text-success" style="position: relative; right: 12px;">Free shipping</h6>
           <p><strong>$<%= costume.price %>/ day</p></strong>
-
+        </div>
+        <div class="rating-index">
+          <i class="fas fa-star"></i><%= costume.average_rating %>
         </div>
       </div>
       <% end %>
     </div>
+    <% end %>
   <% end %>
 </div>
     <div id="map"
