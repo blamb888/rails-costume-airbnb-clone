@@ -1,7 +1,7 @@
 <div class="container-box d-flex">
   <div class="cards-index ml-5 mr-1 my-3">
   <% @costumes.each do |costume| %>
-    <%= link_to costume_path(costume) do %>
+    <%= link_to costume_path(id:costume, query: params[:query]) do %>
     <div class="card-product" style="width: 800px;">
       <%= cl_image_tag costume.photo.key, width: 350, height: 200, gravity: :face, crop: :fill %>
       <div class="card-product-infos">
@@ -9,7 +9,7 @@
         <strong><small><em><%= costume.user.address %></em></small></strong>
         <p> <strong><%= costume.category %></strong></p>
         <p><%= costume.description %></p>
-        <%= link_to costume_path(costume) do %>
+        <%= link_to costume_path(id: costume) do %>
         <div class="price">
           <h6 class="text-success" style="position: relative; right: 12px;">Free shipping</h6>
           <p><strong>$<%= costume.price %>/ day</p></strong>
