@@ -57,7 +57,6 @@ puts "Db is clean"
 
 # puts "#{Costume.count} costumes were created, homeslizzle."
 
-5.times do
   user_image = URI.open('https://thispersondoesnotexist.com/image')
   user = User.create!(
     email: Faker::Internet.safe_email,
@@ -71,7 +70,7 @@ puts "Db is clean"
 
 
 
-  2.times do
+  10.times do
     costume_image = URI.open('https://images-na.ssl-images-amazon.com/images/I/71HOseQFS2L._AC_SL1500_.jpg')
     costume = Costume.create!(
     name: Faker::Superhero.name,
@@ -85,7 +84,7 @@ puts "Db is clean"
 
   puts "#{costume.name} was create!"
 
-    rand(3).times do
+    rand(4).times do
       Review.create!(
         content: Faker::Restaurant.review,
         costume: costume,
