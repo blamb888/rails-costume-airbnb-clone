@@ -57,7 +57,7 @@ puts "Db is clean"
 
 # puts "#{Costume.count} costumes were created, homeslizzle."
 
-1.times do
+5.times do
   user_image = URI.open('https://thispersondoesnotexist.com/image')
   user = User.create!(
     email: Faker::Internet.safe_email,
