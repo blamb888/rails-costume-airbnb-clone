@@ -18,7 +18,7 @@
           <% else %>
             <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
           <% end %>
-        <% if current_user.email == "owner@me.com"  && booking.pending?%>
+        <% if current_user.email == "blamb888@gmail.com"  && booking.pending?%>
           <%= link_to "Confirm Booking", confirm_booking_path(booking), class: "nav-link" %>
         <% else %>
           <h2><%= booking.status %></h2>
