@@ -3,92 +3,71 @@
     <div class="logo-title ml-3">
       <%= image_tag 'logo2.png' %>
     </div>
-
-    <div class="container-search mb-3">
     <p class="text-danger"><strong>What costume</strong><em class="text-white"> matches your personality ?</em></p>
-      <%= form_tag costumes_path, id: "letters", method: :get do %>
-        <div class="input-group-append">
-          <%= text_field_tag :query, params[:query], id:"banner-typed-text", class: "form-control", style:"width: 600px" %>
-          <%= submit_tag "Search", class:"btn btn-outline-secondary", id:"button-addon2" %>
-          <% end %>
-        </div>
-    </div>
   </div>
 </div>
-
-
 <div class="cards-landing mx-5 mt-5 mb-5">
-
   <div>
-  <%= link_to costumes_path(category: 'Heroes') do %>
-    <div class="card-landing" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(https://c4.wallpaperflare.com/wallpaper/423/310/368/women-model-long-hair-cosplay-wallpaper-preview.jpg)">
-      Heroes
-    </div>
+    <%= link_to costumes_path(category: 'Heroes') do %>
+      <div class="card-landing" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(https://c4.wallpaperflare.com/wallpaper/423/310/368/women-model-long-hair-cosplay-wallpaper-preview.jpg)">
+        Heroes
+      </div>
     <% end %>
   </div>
   <div>
-    
-  <%= link_to costumes_path(category: 'Horror') do %>
-    <div class="card-landing" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(https://www.gannett-cdn.com/-mm-/c03bfeca7fc182ff3c06a2364c8ea09652dbccba/c=0-198-3963-2437/local/-/media/2015/10/16/Louisville/Louisville/635805905136741193-HalloweenMakeup-2.jpg?width=660&height=372&fit=crop&format=pjpg&auto=webp)">
-      Horror
-    </div>
+    <%= link_to costumes_path(category: 'Horror') do %>
+      <div class="card-landing" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(https://www.gannett-cdn.com/-mm-/c03bfeca7fc182ff3c06a2364c8ea09652dbccba/c=0-198-3963-2437/local/-/media/2015/10/16/Louisville/Louisville/635805905136741193-HalloweenMakeup-2.jpg?width=660&height=372&fit=crop&format=pjpg&auto=webp)">
+        Horror
+      </div>
     <% end %>
   </div>
   <div>
-
-  <%= link_to costumes_path(category: 'Movies') do %>
-    <div class="card-landing" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(https://previews.123rf.com/images/jqnoc/jqnoc1710/jqnoc171000249/87503499-people-disguised-in-star-wars-costumes-for-the-iii-imperial-stormtroopers-parade-2017-in-the-old-cit.jpg)">
-      Movies
-    </div>
+    <%= link_to costumes_path(category: 'Movies') do %>
+      <div class="card-landing" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(https://previews.123rf.com/images/jqnoc/jqnoc1710/jqnoc171000249/87503499-people-disguised-in-star-wars-costumes-for-the-iii-imperial-stormtroopers-parade-2017-in-the-old-cit.jpg)">
+        Movies
+      </div>
     <% end %>
   </div>
   <div>
-
-  <%= link_to costumes_path(category: 'Animals') do %>
-    <div class="card-landing" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(https://m.media-amazon.com/images/S/aplus-seller-content-images-us-east-1/A13V1IB3VIYZZH/A2OA7G0W7AULYV/B06WCZFBM6/yTQb6kvXRaSL._UX960_TTW__.jpg)">
-      Animals
-    </div>
+    <%= link_to costumes_path(category: 'Animals') do %>
+      <div class="card-landing" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(https://m.media-amazon.com/images/S/aplus-seller-content-images-us-east-1/A13V1IB3VIYZZH/A2OA7G0W7AULYV/B06WCZFBM6/yTQb6kvXRaSL._UX960_TTW__.jpg)">
+        Animals
+      </div>
     <% end %>
   </div>
   <div>
-
-  <%= link_to costumes_path(category: 'Anime') do %>
-    <div class="card-landing" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(https://www.myanimeshoponline.com/wp-content/uploads/2018/10/young-3161821_1920-1.jpg)">
-      Anime
-    </div>
+    <%= link_to costumes_path(category: 'Anime') do %>
+      <div class="card-landing" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(https://www.myanimeshoponline.com/wp-content/uploads/2018/10/young-3161821_1920-1.jpg)">
+        Anime
+      </div>
     <% end %>
   </div>
   <div>
-
-  <%= link_to costumes_path(category: 'TV Show') do %>
-    <div class="card-landing" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(https://previews.123rf.com/images/neydt/neydt1808/neydt180800176/111725650-mulhouse-france-august-17-2018-group-of-fans-of-the-serie-tv-la-casa-de-papel-paper-house-on-netflix.jpg)">
-      TV Show
-    </div>
+    <%= link_to costumes_path(category: 'TV Show') do %>
+      <div class="card-landing" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(https://previews.123rf.com/images/neydt/neydt1808/neydt180800176/111725650-mulhouse-france-august-17-2018-group-of-fans-of-the-serie-tv-la-casa-de-papel-paper-house-on-netflix.jpg)">
+        TV Show
+      </div>
     <% end %>
   </div>
-
   <div>
-  <%= link_to costumes_path(category: 'Historical Figures') do %>
-    <div class="card-landing" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(https://mtv-main-assets.mountvernon.org/files/home/classic-sml-2020-mvm-summer-header-2.png)">
-      Historical Figures
-    </div>
+    <%= link_to costumes_path(category: 'Historical Figures') do %>
+      <div class="card-landing" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(https://mtv-main-assets.mountvernon.org/files/home/classic-sml-2020-mvm-summer-header-2.png)">
+        Historical Figures
+      </div>
     <% end %>
   </div>
-
   <div>
-  <%= link_to costumes_path(category: 'Princess') do %>
-    <div class="card-landing" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(https://i.pinimg.com/564x/d9/83/37/d98337104947a10aa7c0833d1859ec4c.jpg)">
-      Princess
-    </div>
+    <%= link_to costumes_path(category: 'Princess') do %>
+      <div class="card-landing" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(https://i.pinimg.com/564x/d9/83/37/d98337104947a10aa7c0833d1859ec4c.jpg)">
+        Princess
+      </div>
     <% end %>
   </div>
-
   <div>
-  <%= link_to costumes_path(category: 'Cartoon') do %>
-    <div class="card-landing" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(https://static3.thegamerimages.com/wordpress/wp-content/uploads/2018/07/cosoag.jpg)">
-      Cartoon
-    </div>
+    <%= link_to costumes_path(category: 'Cartoon') do %>
+      <div class="card-landing" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(https://static3.thegamerimages.com/wordpress/wp-content/uploads/2018/07/cosoag.jpg)">
+        Cartoon
+      </div>
     <% end %>
   </div>
-
 </div>
