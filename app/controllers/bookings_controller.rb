@@ -6,7 +6,7 @@ class BookingsController < ApplicationController
     @bookings = policy_scope(Booking)
   end
   def edit
-    
+
   end
 
   def update
@@ -20,7 +20,7 @@ class BookingsController < ApplicationController
   def confirm
     @booking.status = 1
     @booking.save
-    redirect_to bookings_path
+    redirect_to bookings_path, notice: "Booking confirmed!"
   end
 
   def new
@@ -36,7 +36,7 @@ class BookingsController < ApplicationController
     @booking.status = 0
     authorize @booking
     if @booking.save
-      redirect_to bookings_path
+      redirect_to bookings_path, notice: "Booked costume! Waiting for confirmation."
     else
       render "costumes/show"
     end
