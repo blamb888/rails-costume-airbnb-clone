@@ -57,37 +57,37 @@ puts "Db is clean"
 
 # puts "#{Costume.count} costumes were created, homeslizzle."
 
-50.times do
+5.times do
   user_image = URI.open('https://thispersondoesnotexist.com/image')
   user = User.create!(
     email: Faker::Internet.safe_email,
     password: 'secret',
     address: User::ADDRESSES.sample # needs to be 6 digits,
     # add any additional attributes you have on your model
-  )
-  user.photo.attach(io: user_image, filename: 'user.png', content_type: 'image/png')
+    )
+    user.photo.attach(io: user_image, filename: 'user.png', content_type: 'image/png')
 
   print '>'
 
 
   costume_image = URI.open('https://picsum.photos/seed/picsum/200/300')
 
-  rand(10).times do
-    Costume.create!(
+  5.times do
+    costume = Costume.create!(
     name: Faker::Superhero.name,
     user: user,
     category: Costume::CATEGORIES.sample,
     description: Faker::Commerce.product_name,
     price: rand(20..99)
-  )
+    )
+    costume.photo.attach(io: costume_image, filename: 'diaDeLosMuertos.png', content_type: 'image/png')
 
-  costume.photo.attach(io: costume_image, filename: 'diaDeLosMuertos.png', content_type: 'image/png')
 
   puts "#{costume.name} was create!"
 
-    rand(10).times do
+    rand(5).times do
       Review.create!(
-        content: Faker::Restaurant.reviewjournal,
+        content: Faker::Restaurant.review,
         costume: costume,
         rating: rand(1..5)
       )
