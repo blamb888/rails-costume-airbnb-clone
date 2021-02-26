@@ -53,11 +53,11 @@ puts "Db is clean"
 #     costume.photo.attach(io: file, filename: 'diaDeLosMuertos.png', content_type: 'image/png')
 # puts "#{costume.name} was create!"
 # end
-# # file.rewind
+# # file.rewind!
 
 # puts "#{Costume.count} costumes were created, homeslizzle."
 
-5.times do
+1.times do
   user_image = URI.open('https://thispersondoesnotexist.com/image')
   user = User.create!(
     email: Faker::Internet.safe_email,
@@ -70,9 +70,9 @@ puts "Db is clean"
   print '>'
 
 
-  costume_image = URI.open('https://picsum.photos/seed/picsum/200/300')
 
-  5.times do
+  2.times do
+    costume_image = URI.open('https://images-na.ssl-images-amazon.com/images/I/71HOseQFS2L._AC_SL1500_.jpg')
     costume = Costume.create!(
     name: Faker::Superhero.name,
     user: user,
@@ -85,7 +85,7 @@ puts "Db is clean"
 
   puts "#{costume.name} was create!"
 
-    rand(5).times do
+    rand(3).times do
       Review.create!(
         content: Faker::Restaurant.review,
         costume: costume,
