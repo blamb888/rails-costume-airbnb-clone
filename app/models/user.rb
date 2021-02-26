@@ -4,7 +4,7 @@ class User < ApplicationRecord
   has_many :bookings
   has_one_attached :photo
 
-  ADDRESSES = ["Tokyo Tower", "Tokyo Skytree", "Tokyo Stadium", "Shibuya Stations", "Shinjuku Station", "Tokyo Station"]
+  ADDRESSES = ["Tokyo Tower", "Tokyo Skytree", "Tokyo Stadium", "Shibuya Stations", "Shinjuku Station", "Tokyo Station", "Shibuya Miyashita Park"]
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
