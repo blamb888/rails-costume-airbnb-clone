@@ -6,7 +6,7 @@
 
   .logo-title {
     position: relative;
-    bottom: 90px;
+    bottom: 60px;
     right: 30px;
     img {
       vertical-align: middle;
@@ -18,10 +18,8 @@
   }
 
   .container-search {
-    position: relative;
-    bottom: 80px;
   }
-  
+
   .banner h1 {
     margin: 0;
     color: white;
@@ -29,12 +27,14 @@
     font-size: 32px;
     font-weight: bold;
   }
-  
+
   .banner p {
     font-size: 20px;
     color: white;
     opacity: .7;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+    position: relative;
+    bottom: 60px;
   }
 
   .container-landing {

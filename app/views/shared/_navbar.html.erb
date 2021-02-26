@@ -5,6 +5,14 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
+  <div class="container-search">
+    <%= form_tag costumes_path, id: "letters", method: :get do %>
+      <div class="input-group-append">
+        <%= text_field_tag :query, params[:query], id:"banner-typed-text", class: "form-control", style:"width: 600px; border-color: rgba(250, 250, 250, .3); background-color: transparent" %>
+        <%= submit_tag "Search", class:"btn btn-outline-secondary", id:"button-addon2" %>
+      <% end %>
+    </div>
+  </div>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>

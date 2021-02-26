@@ -1,34 +1,34 @@
 <div class="container mt-5 mb-5">
   <div class="d-flex justify-content-center row">
-  <div class="col-md-10">
-    <div class="row p-2 bg-white border rounded">
+    <div class="col-md-10">
+      <div class="row p-2 bg-white border rounded">
         <div class="col-md-3 mt-1"><%= cl_image_tag @costume.photo.key, width: 350, height: 270, gravity: :face, crop: :fill, class:"img-fluid img-responsive rounded product-image" %></div>
         <div class="col-md-6 mt-1">
-            <h5><strong><%= @costume.name %></h5></strong>
-            <div class="d-flex flex-row">
-                <div class="ratings mr-2"><i class="fas fa-star"></i><%= @costume.average_rating %></div>
-            </div>
-            <div class="mt-1 mb-1 spec-1"><em><%= @costume.user.address %></em></div>
-            <div class="mt-1 mb-1 spec-1"><strong><%= @costume.category %></strong></div>
-            <div class="mt-1 mb-1 spec-1"><%= @costume.description %></div>
+          <h5><strong><%= @costume.name %></h5>
+          </strong>
+          <div class="d-flex flex-row">
+            <div class="ratings mr-2"><i class="fas fa-star"></i><%= @costume.average_rating %></div>
+          </div>
+          <div class="mt-1 mb-1 spec-1"><em><%= @costume.user.address %></em></div>
+          <div class="mt-1 mb-1 spec-1"><strong><%= @costume.category %></strong></div>
+          <div class="mt-1 mb-1 spec-1"><%= @costume.description %></div>
         </div>
         <div class="align-items-center align-content-center col-md-3 border-left mt-1">
-            <div class="d-flex flex-row align-items-center">
-                <h5><strong>$<%= @costume.price %>/day</strong></h5>
-            </div>
-            <h6 class="text-success">Free shipping</h6>
-            <div class="d-flex flex-column mt-4"><button class="btn btn-danger btn-sm" type="button">Edit</button><button class="btn btn-outline-danger btn-sm mt-2" type="button">Remove</button></div>
+          <div class="d-flex flex-row align-items-center">
+            <h5><strong>$<%= @costume.price %>/day</strong></h5>
+          </div>
+          <h6 class="text-success">Free shipping</h6>
+          <div class="d-flex flex-column mt-4"><button class="btn btn-danger btn-sm" type="button">Edit</button><button class="btn btn-outline-danger btn-sm mt-2" type="button">Remove</button></div>
         </div>
-    </div>
+      </div>
     </div>
   </div>
-    </div>
 </div>
-    
 </div>
-  <% if(@costume.user != current_user) %>
-    <%= render "bookings/form" %>
-    <%= render "reviews/review_form", :costume => @costume, :review => @review%>
-  <% end%>
-  <%= render "reviews/reviews_container", :costume => @costume %>
+</div>
+<% if(@costume.user != current_user) %>
+  <%= render "bookings/form" %>
+  <%= render "reviews/review_form", :costume => @costume, :review => @review%>
+<% end%>
+<%= render "reviews/reviews_container", :costume => @costume %>
 </div>
