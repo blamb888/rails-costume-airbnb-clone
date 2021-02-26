@@ -5,13 +5,12 @@ class CostumesController < ApplicationController
 
 
   def index
-    
     if params[:query].blank?
       @costumes = policy_scope(Costume).where(category: params[:category])
     else
       @costumes = policy_scope(Costume).search_by_name_and_category(params[:query])
+      @query = params[:query]
     end
-      
     @markers = User.all.geocoded.map do |user|
       {
         lat: user.latitude,
@@ -23,6 +22,7 @@ class CostumesController < ApplicationController
   end
 
   def show
+    @query = params[:query]
     @booking = Booking.new
     @review = Review.new
   end
