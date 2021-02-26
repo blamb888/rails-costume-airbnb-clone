@@ -12,17 +12,17 @@
           <p><%= booking.total_days %> day rental at $<%= booking.costume.price %> a day</p>
           <!--<#% total_price = booking.costume.price * total_days %>-->
         </div>
-          <h2 class="card-trip-pricing"><%= "$#{booking.total_price}/total"%></h2>
-          <% if booking.costume.user.photo.attached? %>
-            <%= cl_image_tag booking.costume.user.photo.key, class: "avatar-bordered card-trip-user", gravity: :face, crop: :fill %>
-          <% else %>
-            <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
-          <% end %>
-          <% if current_user.email == "owner@me.com"  && booking.pending?%>
-            <%= link_to "Confirm Booking", confirm_booking_path(booking), class: "nav-link" %>
-          <% else %>
-            <h2><%= booking.status %></h2>
-          <% end %>
+        <h2 class="card-trip-pricing"><%= "$#{booking.total_price}/total"%></h2>
+        <% if booking.costume.user.photo.attached? %>
+          <%= cl_image_tag booking.costume.user.photo.key, class: "avatar-bordered card-trip-user", gravity: :face, crop: :fill %>
+        <% else %>
+          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+        <% end %>
+        <% if current_user.email == "owner@me.com"  && booking.pending?%>
+          <%= link_to "Confirm Booking", confirm_booking_path(booking), class: "nav-link" %>
+        <% else %>
+          <h2><%= booking.status %></h2>
+        <% end %>
       </div>
     </div>
   <% end %>

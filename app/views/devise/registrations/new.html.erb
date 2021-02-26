@@ -14,6 +14,10 @@
                             required: true,
                             hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                             input_html: { autocomplete: "new-password" } %>
+            <%= f.input :address,
+                            required: true,
+                            # hint: ("#{@minimum_address_length} characters minimum" if @minimum_address_length),
+                            input_html: { autocomplete: "new-address" } %>
             <%= f.input :photo %>
             <!--<%= f.input :password_confirmation,
                             required: true,
